@@ -1,0 +1,855 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(247, 243, 243);
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", serif;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------------Header CSS------------------------------------------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  padding: 0.5rem;
+  height: 3rem;
+  display: flex;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------------Header Left Section------------------------------------ */
+.headerLeftSection {
+  flex: 1;
+  margin: 0.4rem 0 0 0.8rem;
+  display: flex;
+}
+
+#linkedinIcon {
+  width: 2.15rem;
+  height: 2.15rem;
+  cursor: pointer;
+}
+
+.dropDownList {
+  display: flex;
+  flex-direction: column;
+}
+
+#searchInput {
+  height: 2.2rem;
+  width: 21.8rem;
+  margin-left: 0.3rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #edf3f8;
+  padding: 0 2.8rem 0 2.8rem;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+}
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 3px 3px 0 0;
+}
+
+.dropDownList {
+  height: auto;
+  list-style: none;
+  padding: 1rem 1rem 0.4rem 1rem;
+  width: inherit;
+  margin: 0 0 0 0.3rem;
+  border-radius: 0 0 3px 3px;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  font-size: 1rem;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+}
+
+.dropDownList li {
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.dropDownList li:hover {
+  color: #0a66c2;
+}
+
+.searchedUserImg {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+}
+
+#searchIcon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  margin: 0.6rem 0 0 3.4rem;
+}
+
+#crossIcon {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.6rem 0 0 -2rem;
+  cursor: pointer;
+  filter: opacity(0.6);
+  display: none;
+}
+
+/* ----------------------------------------Header Right Section------------------------------------ */
+.headerRightSection {
+  display: flex;
+  align-items: center;
+}
+
+.rightDivs,
+.currentUser {
+  margin-left: 1.5rem;
+  font-weight: 450;
+  font-size: 0.9rem;
+  cursor: pointer;
+  filter: opacity(0.6);
+  color: black;
+  text-decoration: none;
+}
+
+.textDecorator {
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.3rem;
+}
+
+.rightIconsDiv,
+.profilePicDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightIcons {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.rightDivs:hover {
+  filter: opacity(1);
+}
+
+.profilePic {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+.currentUser {
+  margin-right: 0.8rem;
+  filter: opacity(1);
+}
+
+.downArrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+}
+
+.me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: opacity(0.6);
+}
+
+.me:hover {
+  filter: opacity(1);
+}
+
+/* --------------------------------------------Container------------------------------------ */
+.container {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.2rem;
+  height: calc(100% - 9.5rem);
+}
+
+/* ----------------------------------------Left Container------------------------------------ */
+.leftContainer {
+  width: 30%;
+  margin-right: 1.2rem;
+  height: 100%;
+}
+
+/* ----------------------------------------currentLogInUser Container------------------------------------ */
+.currentLogInUser,
+.profileInfo {
+  background-color: white;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+}
+
+#userBackgroundImg {
+  width: 100%;
+  height: 9.5rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  top: 0;
+  margin-top: -7rem;
+}
+
+#userImg {
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: aliceblue;
+  margin-top: 1.5rem;
+}
+
+#userName {
+  padding: 0.3rem 0 0;
+  margin: 0.3rem 0 0;
+  font-weight: 450;
+}
+
+#userHighlights {
+  padding: 0.8rem 0 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+#userLocation {
+  padding: 0.8rem 0 0;
+  margin: 0;
+  font-weight: 350;
+}
+
+/* ----------------------------------------profileInfo Container------------------------------------  */
+.profileInfo {
+  margin: 0.8rem 0;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.profileInfoSections {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.profileInfoSections:hover {
+  text-decoration: underline;
+}
+.profileViewers {
+  margin-bottom: 0.7rem;
+}
+
+.viewersCount,
+.impressionCount {
+  color: #0a66c2;
+}
+
+/* ---------------- Show more and less --------------------------------- */
+.showMore,
+.showLess {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.3rem;
+  margin: 0.4rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.showMore:hover {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+.showLess:hover {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+.showMoreIcon {
+  width: 1.8rem;
+  height: 1.4rem;
+}
+
+.showLessIcon {
+  width: 1.26rem;
+  height: 1.14rem;
+  margin-left: 0.4rem;
+}
+
+/* ----------------------------------------Right Container------------------------------------ */
+.rightContainer {
+  flex: 1;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100%;
+}
+.rightContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------------------------------- Create Post Section------------------------------------ */
+.createNewPost {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.createPostUserImg {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+.createNewPost button {
+  width: 100%;
+  height: 3.3rem;
+  border: 1px solid gray;
+  border-radius: 3rem;
+  padding: 0 1rem;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  background-color: white;
+  cursor: pointer;
+}
+.createNewPost button:hover {
+  background-color: rgb(244, 241, 241);
+}
+
+/* ------------------------------- New Post ---------------------------*/
+.newPostSection {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+}
+
+.newPost {
+  background-color: white;
+  margin-top: 5.2rem;
+  padding: 1.5rem 1.5rem 1rem;
+  width: 40%;
+  height: 50%;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.newPostHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newPostHeaderLeft {
+  display: flex;
+}
+
+.postOptions {
+  display: flex;
+  opacity: 0.6;
+  cursor: pointer;
+  margin-top: 0.3rem;
+}
+.postOptions:hover {
+  opacity: 1;
+}
+
+.postOptions p {
+  margin: 0 0.2rem 0 0;
+  font-size: 0.9rem;
+}
+
+.postOptionsIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.createNewPostCrossIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.createNewPostCrossIcon:hover {
+  opacity: 1;
+}
+
+.newPostMiddleSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#newPostDescription {
+  margin-top: 0.8rem;
+  width: 99%;
+  flex: 1;
+  font-size: 1rem;
+  font-family: "Montserrat", serif;
+  border: none;
+  resize: none;
+}
+#newPostDescription:focus {
+  outline: none;
+}
+
+.newPostMiddleSectionIcons {
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.newPostMiddleSectionIcons img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.newPostMiddleSectionIcons button {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+  font-weight: 550;
+  height: 1.2rem;
+  margin-right: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.newPostMiddleSectionIcons button img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.2rem;
+}
+
+.newPost hr {
+  margin: 0.5rem 0;
+}
+
+.newPostFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.newPostFooter button {
+  font-family: "Montserrat", serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  width: 4rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.newPostFooter button:hover {
+  opacity: 1;
+}
+
+/* ---------------------------------------- Filter Section------------------------------------  */
+.filtersSection {
+  font-family: "Montserrat", serif;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  height: 1.5rem;
+}
+.filter {
+  margin-top: 0.3rem;
+  height: 1.5rem;
+  z-index: 10;
+  display: flex;
+  height: fit-content;
+  align-items: flex-start;
+}
+.filterByDate {
+  display: flex;
+  align-items: center;
+  margin-left: 0.2rem;
+}
+
+.selectDates {
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  background-color: #edf3f8;
+  margin-left: 0.3rem;
+  border-radius: 0.3rem;
+  padding: 1.3rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5rem);
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+.selectDates label {
+  font-weight: 400;
+  margin-right: 0.6rem;
+}
+
+#startDate,
+#endDate {
+  cursor: text;
+  font-family: "Montserrat", serif;
+}
+#startDate:focus {
+  outline: none;
+}
+#endDate:focus {
+  outline: none;
+}
+
+.startDateError,
+.endDateError {
+  padding: 0;
+  align-self: flex-end;
+  font-size: 0.6rem;
+  margin: -0.3rem 0.3rem 0 0;
+  color: red;
+  display: none;
+}
+
+.filterButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#applyButton,
+#resetButton {
+  margin-top: 0.3rem;
+  width: 30%;
+  align-self: center;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-family: "Montserrat", serif;
+  border-radius: 0.3rem;
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+  font-weight: 500;
+}
+
+#applyButton {
+  margin-left: 2.9rem;
+  margin-right: 0.8rem;
+}
+
+.sort {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sortHeading,
+.filterHeading {
+  margin-right: 0.2rem;
+  font-weight: 400;
+  filter: opacity(0.6);
+}
+.sort::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: calc(100% - 7.5rem);
+  background-color: gray;
+  margin: 0.3rem;
+  filter: opacity(0.6);
+}
+
+.filterOption,
+.sortOption {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  list-style-type: none;
+}
+.sortOption:focus {
+  outline: none;
+}
+
+.sortOption {
+  font-size: 0.8rem;
+}
+
+.calenderIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+/* ----------------------- New Post Notification --------------------------- */
+.newPostNotification {
+  position: absolute;
+  font-size: 0.8rem;
+  margin: 1rem 0 0 30%;
+  font-weight: 600;
+  color: #0a66c2;
+  background-color: #edf3f8;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: none;
+  z-index: 999;
+}
+
+/* ---------------------------------------- Posts Section------------------------------------  */
+.post {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------- Posts Header------------------------------------ */
+.postHeader {
+  display: flex;
+  align-items: center;
+}
+
+.postOwnerPic {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.postOwnerName {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.postOwnerHighlights,
+.postCreatedDate {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: gray;
+}
+
+/* --------------------------------------- Posts Description------------------------------------ */
+.postDescription {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* --------------------------------------- Posts Images------------------------------------ */
+.postImages {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  background-color: black;
+  border-radius: 0.3rem;
+  position: relative;
+  height: 30rem;
+}
+
+.postImages::-webkit-scrollbar {
+  display: none;
+}
+
+.postImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.activeImage {
+  display: block;
+}
+
+.slideLeftButton {
+  position: absolute;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  left: 0;
+  filter: opacity(0.4);
+}
+
+.slideRightButton {
+  position: absolute;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  right: 0;
+  filter: opacity(0.4);
+}
+
+.hideButton {
+  display: none;
+}
+
+/* --------------------------------------- Posts like and comment Counts------------------------------------ */
+.counts {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0.5rem 0 -0.3rem 0;
+  font-size: 0.9rem;
+}
+.postCountSections {
+  cursor: pointer;
+}
+.postCountSections:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+}
+
+/* --------------------------------------- Posts Footer------------------------------------ */
+.postFooter {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postFooterSections {
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  font-weight: 500;
+}
+.postFooterSections:hover {
+  background-color: lightgray;
+}
+
+.postIcons {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 4px -2px 0;
+}
+
+/* ----------------------------------------Footer------------------------------------ */
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  padding: 0.8rem;
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", serif;
+}
+
+#linkedImage2 {
+  width: 4rem;
+  height: 1.7rem;
+  margin-right: 0.4rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .rightDivsIconName,
+  .me {
+    display: none;
+  }
+  #searchInput {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+  .container {
+    display: block;
+  }
+  .leftContainer {
+    width: 100%;
+    height: auto;
+  }
+  .sort::before {
+    width: calc(100% - 8rem);
+  }
+  .newPostNotification {
+    margin-left: 42%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 63.5%;
+  }
+  #searchInput {
+    width: 15rem;
+  }
+  .sort::before {
+    width: calc(100% - 8.5rem);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #searchInput {
+    width: 5.5rem;
+  }
+}
